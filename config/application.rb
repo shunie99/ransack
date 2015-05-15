@@ -23,5 +23,6 @@ module RansackStudy
     # config.i18n.default_locale = :de
     config.i18n.default_locale = :ja
     config.encoding = "utf-8"
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end

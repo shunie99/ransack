@@ -6,6 +6,7 @@ class TopicsController < ApplicationController
   def index
     @search = Topic.search(params[:q]) # この行を追加
     @topics = @search.result #この行を修正
+    @models = Topic.paginate(:page => params[:page], :per_page => 30)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -75,6 +76,7 @@ class TopicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def topic_params
-      params.require(:topic).permit(:title,:content,:user_id)
+      params.require(:topic).permit(:title,:content,:user_id,:member,:test)
     end
+
 end

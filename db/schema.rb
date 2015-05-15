@@ -15,6 +15,9 @@ ActiveRecord::Schema.define(version: 20150507080455) do
 
   create_table "topics", force: true do |t|
     t.string   "title"
+    t.string   "member"
+    t.string   "pulldown"
+    t.string   "test"
     t.text     "content"
     t.integer  "user_id"
     t.datetime "created_at"

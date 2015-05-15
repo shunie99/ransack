@@ -1,19 +1,34 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>担当:</b>
+  <%= @topic.user.name %><!--この行を修正-->
+</p>
+<p>
   <strong>Title:</strong>
   <%= @topic.title %>
 </p>
+
+<p>
+  <strong>Member:</strong>
+  <%= @topic.member %>
+</p>
+
+<p>
+  <strong>重要度:</strong>
+  <%= @topic.test %>
+</p>
+
+
 
 <p>
   <strong>Content:</strong>
   <%= @topic.content %>
 </p>
 
-<p>
-  <b>User:</b>
-  <%= @topic.user.name %><!--この行を修正-->
-</p>
+
+
+
 
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Back', topics_path %>
